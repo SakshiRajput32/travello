@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,14 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link  rel="stylesheet" type="text/css" href="./index.css" >
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Travelo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <title>Travello</title>
   </head>
   <body>
       <!--navbar-->
       <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light px-5 py-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Travelo</a>
+          <a class="navbar-brand" href="#">Travello</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,31 +26,32 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#1">About</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#3">Offers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#4">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">packages</a>
+                <a class="nav-link" href="#6">Review</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Review</a>
+                <a class="nav-link" href="#5">Booking</a>
               </li>
+              <!--mode-->
+              <div class="form-check form-switch  ms-3 mt-2 me-3">
+                
+                <input class="form-check-input" type="checkbox" id="lightSwitch" />
+              </div>
+              <!--------->
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <button type="button" class="btn btn-outline-info"  data-bs-toggle="modal" data-bs-target="#modal_login">Sign Up</button>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
+
+              
               
             </ul>
            
@@ -58,14 +59,65 @@
         </div>
       </nav>
       <!--navbae-end-->
-      <!--select-->
-      
-      <!--------->
+      <!--modal-->
+      <div class="modal fade" id="modal_login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <form id="modal_form_login" novalidate="novalidate">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-lock mr-1"></i>LOGIN
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="modal_login_email">Email address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" id="modal_login_email" name="modal_login_email" class="form-control" placeholder="Enter email" />
+                            </div>
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_login_password">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fas fa-unlock-alt"></i>
+                                </span>
+                                <input type="password" id="modal_login_password" name="modal_login_password" class="form-control" placeholder="Password" />
+                            </div>
+                        </div>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" id="modal_login_remember" class="custom-control-input" />
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Remember me</span>
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                        <button type="submit" class="btn btn-primary">SIGN-IN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
       <!--corousel-->
 <div class="corousel">
     <img class="img-fluid background" src="./images/panorama-ge0acdb1ff_1920.jpg" />
-    <h1 class=" background-text  ">TAKE YOUR DREAM<br> VACATION<p class=" background-p mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ipsum expedita in<br> dolore laboriosam rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quos.</p>
+    <div class=" background-text">
+    <h1  class=" col-lg-8 col-md-8 col-sm-12 col-12 "  >
+      <span id="typed"></span>
     </h1>
+    <p class=" background-p mt-3" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex molestias<br> exercitationem ipsum nostrum itaque Amet..
+    </p>
+    <a class="btn btn-info" href="#5" role="button">Book now</a>
+    
+    </div>
   </div>
       <!--corousel end-->
       <!---search-->
@@ -83,12 +135,13 @@
             <option value="7">Mexico</option>
             <option value="8">Russia</option>
           </select>
-          <button class="btn btn-outline-secondary" type="button">Search</button>
+          
+          <a class="btn btn-outline-secondary" href="#2" role="button">Search</a>
         </div>
       </section>
       <!-------->
       <!--about-->
-      <div class="row mt-5 mx-1  about">
+      <div id="1" class="row mt-5 mx-1  about" >
           <div class="col-lg-6 col-md-6 col-12 px-5 part1 shadow ">
            <div>   <h6 class="abouth6 ">ABOUT US</h6></div>
          <div><h1 class="abouth1 ">Explore All Corners Of The World With US</h1></div>
@@ -102,7 +155,7 @@
       </div>
       <!--about--end-->
       <!--COUNTRIES-->
-      <section class=" my-5 mx-5">
+      <section class=" my-5 mx-5" id="2">
         <h1 class="container text-center open pb-4">Countries Open For Travel</h1>
        <div class="row">
       <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -110,7 +163,7 @@
             <img class="img-fluid" src="./images/kuala-lumpur-g10f1cbc47_640.jpg" alt="">
             <div class="overlay">
                <h2>Malasia</h2>
-               <a class="info" href="#">Book Now</a>
+               <a class="info" href="#5">Book Now</a>
             </div>
         </div>
     </div>
@@ -119,7 +172,7 @@
           <img class="img-fluid" src="./images/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky.jpg" alt="">
           <div class="overlay">
              <h2>Australia</h2>
-             <a class="info" href="#">Book Now</a>
+             <a class="info" href="#5">Book Now</a>
           </div>
       </div>
   </div>
@@ -128,7 +181,7 @@
         <img class="img-fluid" src="./images/pexels-andre-furtado-2916826.jpg" alt="">
         <div class="overlay">
            <h2>Canada</h2>
-           <a class="info" href="#">Book Now</a>
+           <a class="info" href="#5">Book Now</a>
         </div>
     </div>
 </div>
@@ -137,7 +190,7 @@
       <img class="img-fluid" src="./images/pexels-asad-photo-maldives-1320686.jpg" alt="">
       <div class="overlay">
          <h2>Maldives</h2>
-         <a class="info" href="#">Book Now</a>
+         <a class="info" href="#5">Book Now</a>
       </div>
   </div>
 </div>
@@ -149,7 +202,7 @@
             <img class="img-fluid" src="./images/pexels-shvets-anna-2570060.jpg" alt="">
             <div class="overlay">
                <h2>Denmark</h2>
-               <a class="info" href="#">Book Now</a>
+               <a class="info" href="#5">Book Now</a>
             </div>
         </div>
     </div>
@@ -158,7 +211,7 @@
           <img class="img-fluid" src="./images/pexels-andreea-ch-1369212.jpg" alt="">
           <div class="overlay">
              <h2>Egypt</h2>
-             <a class="info" href="#">Book Now</a>
+             <a class="info" href="#5">Book Now</a>
           </div>
       </div>
   </div>
@@ -167,7 +220,7 @@
         <img class="img-fluid" src="./images/pexels-rafael-guajardo-604661.jpg" alt="">
         <div class="overlay">
            <h2>Mexico</h2>
-           <a class="info" href="#">Book Now</a>
+           <a class="info" href="#5">Book Now</a>
         </div>
     </div>
 </div>
@@ -176,17 +229,17 @@
       <img class="img-fluid" src="./images/pexels-pixabay-415980.jpg" alt="">
       <div class="overlay">
          <h2>Russia</h2>
-         <a class="info" href="#">Book Now</a>
+         <a class="info" href="#5">Book Now</a>
       </div>
   </div>
 </div>
     </section>
       <!------->
       <!--offers-->
-      <section class="special-section">
+      <section class="special-section" id="3">
         <div class="container">
           <div class="section-heading text-center">
-            <div class="row">
+            <div class="row g-5">
               <div class="col-lg-8 offset-lg-2">
                
                 <h2 class="mt-5">TRAVELLO SPECIAL</h2>
@@ -217,7 +270,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4 ">
                 <div class="special-item">
                   <figure class="special-img">
                     <img src="https://demo.bosathemes.com/html/travele/assets/images/img10.jpg" alt="">
@@ -266,14 +319,14 @@
 
       <!-------------->
       <!--services-->
-      <section class="mx-5 mb-5">
+      <section class="mx-5 mb-5 services" id="4">
         <h1 class="text-center container pb-3">Why Choose Us</h1>
         <div class="row">
           <div class="col-lg-3 col-md-3 col-xs-12 col-12">
             <div class="card text-center shadow border-light">
               <lord-icon src="https://cdn.lordicon.com/yalwfksd.json" class="px-auto mx-auto" trigger="loop" colors="primary:#121331,secondary:#98c1d9" style="width:100px;height:100px">
                </lord-icon>
-               <h5>Safety Is Priority</h5>
+               <h5 class="">Safety Is Priority</h5>
                <p class="text-center px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus quisquam voluptate.</p>
             </div>
 
@@ -309,12 +362,483 @@
       </section>
 
      <!-------------->
-     <!-----review-->
-   
+     <!-----timel-->
+     
      <!--------------->
+     <!--book now-->
+    
+<!--review-->
+<section class="testimonial" id="6">
+  <h1 class="text-center pt-5 mt-5">Testimonial</h1>
+<div class="review">
+  
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+<div class="testimonialbox">
+  
+  <div class="content">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+  <div class="details">
+    <div class="imgbx">
+    <img src="./images/img3.jfif">
+
+    </div>
+<h3>Lorem, ipsum<br><span> Traveller</span>
+</h3>
+  </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonialbox">
+  
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel laboriosam sit veritatis, commodi tempora tenetur minima doloremque ut accusamus!</p>
+          <div class="details">
+            <div class="imgbx">
+            <img src="./images/img3.jfif">
+        
+            </div>
+        <h3>Lorem, ipsum<br><span> Traveller</span>
+        </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  
+</div>
+</section>
+<!------>
+<section class="booking " id="5">
+  <div class="row g-0">
+    <div class="col-lg-6 col-md-6 col-12 col-sm-12 shadow text-center">
+     <h1 class="fw-bold py-4 text-center booking-heading">Book Your Trip Now!!</h1>
+     <lottie-player class=" mx-auto " src="https://assets5.lottiefiles.com/packages/lf20_ayk6t8xd.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop autoplay></lottie-player>
+  </div>
+  <div class="col-lg-6 col-md-6 col-12 col-sm-12 book2 px-5">
+    
+    <form class="">
+ 
+   <label for="validationCustom01" class="form-label mt-4">First name</label>
+   <input type="text" class="form-control mb-2" id="validationCustom01" value="" required>
+   <div class="valid-feedback">
+     Looks good!
+     </div>
+     <label for="validationCustom02" class="form-label">Last name</label>
+     <input type="text" class="form-control mb-2" id="validationCustom02" value="" required>
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+     <label for="validationCustom05" class="form-label">Contact no.</label>
+     <input type="number" class="form-control" id="validationCustom05" required>
+<div class="invalid-feedback">
+ Please provide contact details
+</div>
+     <label for="validationCustom04" class="form-label">Enter An Origin Location</label>
+<select class="form-select mb-2" id="validationCustom04" required>
+ <option selected disabled value="">Choose...</option>
+ <option>Delhi</option>
+ <option>Mumbai</option>
+ <option>Chennai</option>
+ <option>Kolkata</option>
+ <option>Indore</option>
+ <option>Goa</option>
+ <option>Bhopal</option>
+ <option>Jaipur</option>
+</select>
+<label for="validationCustom04" class="form-label">Enter An Destination Location</label>
+<select class="form-select" id="validationCustom04" required>
+ <option selected disabled value="">Choose...</option>
+ <option>Ausrtalia</option>
+ <option>Canada</option>
+ <option>Malasia</option>
+ <option>Russia</option>
+ <option>Mexico</option>
+ <option>Egypt</option>
+ <option>Denmark</option>
+ <option>Canada</option>
+</select>
+<div class="row pt-3">
+ <div class="col-lg-6 col-md-6 col-12 mb-3">
+ <label for="date">Check In</label>
+ <input type="date" id="date">
+</div>
+<div class="col-lg-6 col-md-6 col-12 mb-3">
+ <label for="date">Check Out</label>
+ <input type="date" id="date">
+</div>
+<div class="form-check mb-3">
+ <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+ <label class="form-check-label" for="invalidCheck">
+   Agree to terms and conditions
+ </label>
+ <div class="invalid-feedback">
+   You must agree before submitting.
+ </div>
+ </div>
+ <button class="btn btn-primary mb-4 " type="submit">Submit Now</button>
+</div>
+   </div>
+   </form>
+  </div>
+    </div>
+</section>
+<!------->
+     <!-----footer-->
+     <div class=" ">
+     <footer
+              class="text-center text-lg-start text-white pt-4"
+              style="background-color: #1c2331"
+              >
+        <!-- Section: Social media -->
+        
+          <!-- Left -->
+    
+          <!-- Right -->
+          <!--<div>
+            <a href="" class="text-white me-4">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fas fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fas fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fas fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fas fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fas fa-github"></i>
+            </a>
+          </div>-->
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold">Travello</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, quia itaque distinctio voluptatum beatae.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Useful Links</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  <a href="#!" class="text-white">Book now</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Offers</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Services</a>
+                </p>
+               
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Company</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  <a href="#!" class="text-white">About</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Terms and Conditions</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Support</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+    
+        <!-- Copyright -->
+        <div
+             class="text-center p-3"
+             style="background-color: rgba(0, 0, 0, 0.2)"
+             >
+          © 2021 Copyright:
+          <a class="text-white" href="#/"
+             >Travello.com</a
+            >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    
+    </div>
+    <!-- End of .container -->
+     <!-------------->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+     window.onload = function() {
+     console.log("loaded")
+     var typed = new Typed('#typed',{
+       strings: ["Take Your Dream Vacation With Us...",
+      ],
+       backSpeed:10,
+       smartBackSpace:true,
+       backDelay:1200,
+       startDelay:1000,
+       typeSpeed:100,
+       loop:true,
+     });
+   };
+
+    </script>
+    
+      <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+          loop:true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+   <script>
+(function () {
+  let lightSwitch = document.getElementById("lightSwitch");
+  if (lightSwitch) {
+    darkMode();
+    lightSwitch.addEventListener("change", () => {
+      lightMode();
+    });
+
+    /**
+     * @function darkmode
+     * @summary: firstly, checks if browser local storage has 'lightSwitch' key
+     * if key has 'dark' value then changes the theme to 'dark mode'
+     * Basically, replaces/toggles every CSS class that has '-light' class with '-dark'
+     */
+    function darkMode() {
+      let isSelected =
+        localStorage.getItem("lightSwitch") !== null &&
+        localStorage.getItem("lightSwitch") === "dark";
+
+      if (isSelected) {
+        document.querySelectorAll(".bg-light").forEach((element) => {
+          element.className = element.className.replace(/-light/g, "-dark");
+        });
+
+        document.body.classList.add("bg-dark");
+
+        if (document.body.classList.contains("text-dark")) {
+          document.body.classList.replace("text-dark", "text-light");
+        } else {
+          document.body.classList.add("text-light");
+        }
+        
+        // set light switch input to true
+        lightSwitch.checked = true;
+      }
+    }
+
+    /**
+     * @function lightmode
+     * @summary: check whether the switch is on (checked) or not.
+     * If the switch is on then set 'lightSwitch' local storage key and call @function darkmode
+     * If the switch is off then it is light mode so, switch the theme and
+     *  remove 'lightSwitch' key from local storage
+     */
+    function lightMode() {
+      if (lightSwitch.checked) {
+        localStorage.setItem("lightSwitch", "dark");
+        darkMode();
+      } else {
+        document.querySelectorAll(".bg-dark").forEach((element) => {
+          element.className = element.className.replace(/-dark/g, "-light");
+        });
+        document.body.classList.replace("text-light", "text-dark");
+        localStorage.removeItem("lightSwitch");
+      }
+    }
+  }
+})();
+   </script>
+    
   </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .background{
     height: 93vh;
     width: 100vw;
@@ -13,7 +14,7 @@
   position: absolute;
   top: 30%;
   left: 10%;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
 }
 .background-p{
@@ -28,9 +29,7 @@
 .abouth6{
     color: #3d5a80;
 }
-.abouth1{
-    color: #293241;
-}
+
 .about .part2{
     background-color: #98c1d9;
     
@@ -157,6 +156,9 @@
       text-decoration: none !important;
       outline: 0;
   }
+  .special-content h3{
+    color: black;
+  }
   .special-section  .special-content .package-price {
       color: #F56960;
       font-size: 18px;
@@ -224,6 +226,11 @@
       font-size: 24px;
     }
   } 
+
+  /*modal*/
+  .modal-content{
+    color: black;
+  }
 /*countries*/
 .countries .hovereffect {
   width:100%;
@@ -321,6 +328,157 @@
   text-transform: uppercase;
  } 
 /*-----*/
-/*-review*/
 
-/*-----------*/
+
+.container__line {
+  /* Border */
+  border-right: 2px solid #aaa;
+
+  /* Positioned at the left */
+  left: 16px;
+  position: absolute;
+  top: 0px;
+
+  /* Take full height */
+  height: 100%;
+}
+
+.container__items {
+  /* Reset styles */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container__item {
+  margin-bottom: 8px;
+}
+
+.container__top {
+  /* Center the content horizontally */
+  align-items: center;
+  display: flex;
+}
+
+.container__circle {
+  /* Rounded border */
+  background-color: rgb(170, 170, 170);
+  border-radius: 9999px;
+
+  /* Size */
+  height: 32px;
+  width: 32px;
+}
+
+.container__title {
+  /* Take available width */
+  flex: 1;
+}
+
+.container__desc {
+  /* Make it align with the title */
+  margin-left: 48px;
+}
+/*booking*/
+.book2{
+  background-color: #98c1d9;
+ 
+}
+.booking-img{
+  width: 50vw;
+  height: 103vh;
+}
+@media (max-width: 752px) {
+  .booking-img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+ }
+ .booking-heading{
+   font-size: 50px;
+ }
+ 
+ .testimonial{
+  background-color: #0791BE;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+ }
+.review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+.review .swiper{
+  width: 100%;
+  padding-top: 50px;
+  
+}
+
+.review  .swiper-slide{
+  width: 320px;
+ background-color: white;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.review  .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+ .testimonialbox{
+   position: relative;
+   width: 100%;
+   padding: 40px;
+   padding-top: 60px;
+   color: #999;
+
+ }
+ .testimonialbox .details{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+
+ }
+ .testimonialbox .details .imgbx{
+   position: relative;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+ }
+ .testimonialbox .details .imgbx img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ .testimonialbox .details h3{
+    font-size: 16px;
+    font-size: 400;
+    letter-spacing: 1px;
+    color: #0791BE;
+    line-height: 1.1rem;
+ }
+ .testimonialbox .details h3 span{
+   font-size: 12px;
+   color: #666;
+ }
+
+/*modes*/
+#lightSwitch {
+  transform: scale(1.8);
+}
+.services h5{
+  color: #333;
+}
+.services p{
+  color: #333;
+}
