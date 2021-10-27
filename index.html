@@ -106,20 +106,33 @@
             </form>
         </div>
     </div>
-      <!--corousel-->
-<div class="corousel">
-    <img class="img-fluid background" src="./images/panorama-ge0acdb1ff_1920.jpg" />
-    <div class=" background-text">
-    <h1  class=" col-lg-8 col-md-8 col-sm-12 col-12 "  >
-      <span id="typed"></span>
-    </h1>
-    <p class=" background-p mt-3" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex molestias<br> exercitationem ipsum nostrum itaque Amet..
-    </p>
-    <a class="btn btn-info" href="#5" role="button">Book now</a>
-    
+
+
+
+    <div id="carouselExampleSlidesOnly background" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/panorama-ge0acdb1ff_1920.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/desert-g3bc9f3b34_1280.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/canal-g69fc865fa_1920.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
     </div>
-  </div>
-      <!--corousel end-->
+    <div class=" background-text">
+      <h1  class=" col-lg-8 col-md-8 col-sm-12 col-12 "  >
+        <span id="typed"></span>
+      </h1>
+      <p class=" background-p mt-3" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex molestias<br> exercitationem ipsum nostrum itaque Amet..
+      </p>
+      <a class="btn btn-info" href="#5" role="button">Book now</a>
+      
+      </div>
+     
+
       <!---search-->
       <section class="search ">
         <h2 class="text-center py-5 text-light">Search Destination</h2>
@@ -748,12 +761,14 @@
      console.log("loaded")
      var typed = new Typed('#typed',{
        strings: ["Take Your Dream Vacation With Us...",
+       "Happiness Is Closer Than You Think...",
+       "Explore New Places , Adventure Awaits..."
       ],
        backSpeed:10,
        smartBackSpace:true,
        backDelay:1200,
        startDelay:1000,
-       typeSpeed:100,
+       typeSpeed:56,
        loop:true,
      });
    };

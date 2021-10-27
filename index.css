@@ -10,6 +10,10 @@
     position: relative;
     opacity: 1;
 }
+.carousel-item img{
+  height: 93vh;
+    width: 100vw; 
+}
 .background-text{
   position: absolute;
   top: 30%;
@@ -18,7 +22,7 @@
   color: white;
 }
 .background-p{
-  font-weight: 100;
+  font-weight: 400;
  font-size: 18px;
  line-height: 1.5rem;
 }
