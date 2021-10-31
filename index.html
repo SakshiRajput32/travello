@@ -10,11 +10,13 @@
     <link  rel="stylesheet" type="text/css" href="./index.css" >
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Travello</title>
   </head>
   <body>
+    
       <!--navbar-->
-      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light px-5 py-3">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light px-3 py-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Travello</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +30,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#1">About</a>
               </li>
-             
               <li class="nav-item">
                 <a class="nav-link" href="#3">Offers</a>
               </li>
@@ -42,7 +43,7 @@
                 <a class="nav-link" href="#5">Booking</a>
               </li>
               <!--mode-->
-              <div class="form-check form-switch  ms-3 mt-2 me-3">
+              <div class="form-check form-switch mb-2 ms-3 mt-2 me-3">
                 
                 <input class="form-check-input" type="checkbox" id="lightSwitch" />
               </div>
@@ -50,15 +51,12 @@
               <li class="nav-item">
                 <button type="button" class="btn btn-outline-info"  data-bs-toggle="modal" data-bs-target="#modal_login">Sign Up</button>
               </li>
-
-              
               
             </ul>
            
           </div>
         </div>
       </nav>
-      <!--navbae-end-->
       <!--modal-->
       <div class="modal fade" id="modal_login" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -68,9 +66,7 @@
                         <h5 class="modal-title">
                             <i class="fas fa-lock mr-1"></i>LOGIN
                         </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span>&times;</span>
-                        </button>
+                        
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
@@ -84,7 +80,8 @@
                             <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="modal_login_password">Password</label>
+                          <label for="validationServer05" class="form-label">Zip</label>
+
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fas fa-unlock-alt"></i>
@@ -99,10 +96,10 @@
                         </label>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-                        <button type="submit" class="btn btn-primary">SIGN-IN</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
-                </div>
+                    </div>
             </form>
         </div>
     </div>
@@ -122,7 +119,7 @@
         </div>
       </div>
     </div>
-    <div class=" background-text">
+    <div class="book background-text">
       <h1  class=" col-lg-8 col-md-8 col-sm-12 col-12 "  >
         <span id="typed"></span>
       </h1>
@@ -135,7 +132,7 @@
 
       <!---search-->
       <section class="search ">
-        <h2 class="text-center py-5 text-light">Search Destination</h2>
+        <h1 class="text-center py-5 text-light">Search Destination</h1>
         <div class="input-group pb-5 px-5">
           <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
             <option selected>Choose...</option>
@@ -154,12 +151,12 @@
       </section>
       <!-------->
       <!--about-->
-      <div id="1" class="row mt-5 mx-1  about" >
-          <div class="col-lg-6 col-md-6 col-12 px-5 part1 shadow ">
+      <div id="1" class="row mt-5  mx-1 about" >
+          <div class="col-lg-6 col-md-6 col-12 px-4 part1 shadow ">
            <div>   <h6 class="abouth6 ">ABOUT US</h6></div>
          <div><h1 class="abouth1 ">Explore All Corners Of The World With US</h1></div>
           </div>
-          <div class="col-lg-6 col-md-6 col-12  part2 px-5">
+          <div class="col-lg-6 col-md-6 col-12  part2 px-4">
               <h6 class="py-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae assumenda velit maxime architecto temporibus rem tenetur ipsam nobis. Ducimus sequi eaque soluta, corporis, facere architecto nam sunt totam amet distinctio ea nulla, aliquid adipisci aspernatur aperiam dolor veritatis.</h6>
               
               <div class="btn mb-5">Learn more</div>
@@ -168,10 +165,10 @@
       </div>
       <!--about--end-->
       <!--COUNTRIES-->
-      <section class=" my-5 mx-5" id="2">
-        <h1 class="container text-center open pb-4">Countries Open For Travel</h1>
+      <section class=" my-5 mx-5" id="2" >
+        <h1 class="container-fluid text-center open pt-4 pb-5">Countries Open For Travel</h1>
        <div class="row">
-      <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12"  data-aos="fade-up">
         <div class="hovereffect">
             <img class="img-fluid" src="./images/kuala-lumpur-g10f1cbc47_640.jpg" alt="">
             <div class="overlay">
@@ -180,7 +177,7 @@
             </div>
         </div>
     </div>
-    <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
       <div class="hovereffect">
           <img class="img-fluid" src="./images/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky.jpg" alt="">
           <div class="overlay">
@@ -189,7 +186,7 @@
           </div>
       </div>
   </div>
-  <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
     <div class="hovereffect">
         <img class="img-fluid" src="./images/pexels-andre-furtado-2916826.jpg" alt="">
         <div class="overlay">
@@ -198,7 +195,7 @@
         </div>
     </div>
 </div>
-<div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
   <div class="hovereffect">
       <img class="img-fluid" src="./images/pexels-asad-photo-maldives-1320686.jpg" alt="">
       <div class="overlay">
@@ -210,7 +207,7 @@
     </div>
     <!--row2-->
     <div class="row pt-4">
-      <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
         <div class="hovereffect">
             <img class="img-fluid" src="./images/pexels-shvets-anna-2570060.jpg" alt="">
             <div class="overlay">
@@ -219,7 +216,7 @@
             </div>
         </div>
     </div>
-    <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
       <div class="hovereffect">
           <img class="img-fluid" src="./images/pexels-andreea-ch-1369212.jpg" alt="">
           <div class="overlay">
@@ -228,7 +225,7 @@
           </div>
       </div>
   </div>
-  <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
     <div class="hovereffect">
         <img class="img-fluid" src="./images/pexels-rafael-guajardo-604661.jpg" alt="">
         <div class="overlay">
@@ -237,7 +234,7 @@
         </div>
     </div>
 </div>
-<div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="countries col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
   <div class="hovereffect">
       <img class="img-fluid" src="./images/pexels-pixabay-415980.jpg" alt="">
       <div class="overlay">
@@ -252,17 +249,17 @@
       <section class="special-section" id="3">
         <div class="container">
           <div class="section-heading text-center">
-            <div class="row g-5">
-              <div class="col-lg-8 offset-lg-2">
+            <div class="row ">
+              <div class="col-lg-8 offset-lg-2"  >
                
-                <h2 class="mt-5">TRAVELLO SPECIAL</h2>
-                <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                <h2 class="container-fluid mt-5">TRAVELLO SPECIAL</h2>
+                <p class="mt-2 container-fluid">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
               </div>
             </div>
           </div>
           <div class="special-inner">
             <div class="row">
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="special-item">
                   <figure class="special-img">
                     <img src="https://demo.bosathemes.com/html/travele/assets/images/img9.jpg" alt="" class="img-fluid">
@@ -283,7 +280,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 ">
+              <div class="col-md-6 col-lg-4 " data-aos="fade-up">
                 <div class="special-item">
                   <figure class="special-img">
                     <img src="https://demo.bosathemes.com/html/travele/assets/images/img10.jpg" alt="">
@@ -304,7 +301,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="special-item">
                   <figure class="special-img">
                     <img src="https://demo.bosathemes.com/html/travele/assets/images/img11.jpg" alt="">
@@ -333,9 +330,9 @@
       <!-------------->
       <!--services-->
       <section class="mx-5 mb-5 services" id="4">
-        <h1 class="text-center container pb-3">Why Choose Us</h1>
+        <h1 class="open text-center container pb-5 ">Why Choose Us</h1>
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-12"  data-aos="flip-up">
             <div class="card text-center shadow border-light">
               <lord-icon src="https://cdn.lordicon.com/yalwfksd.json" class="px-auto mx-auto" trigger="loop" colors="primary:#121331,secondary:#98c1d9" style="width:100px;height:100px">
                </lord-icon>
@@ -344,7 +341,7 @@
             </div>
 
           </div>
-          <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-12"  data-aos="flip-up">
             <div class="card text-center shadow border-light">
               <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="px-auto mx-auto" trigger="loop" colors="primary:#121331,secondary:#98c1d9" style="width:100px;height:100px">
                </lord-icon>
@@ -353,7 +350,7 @@
             </div>
 
           </div>
-          <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-12"  data-aos="flip-up">
             <div class="card text-center shadow border-light">
               <lord-icon src="https://cdn.lordicon.com/yeallgsa.json" class="px-auto mx-auto" trigger="loop" colors="primary:#121331,secondary:#98c1d9" style="width:100px;height:100px">
                </lord-icon>
@@ -362,7 +359,7 @@
             </div>
 
           </div>
-          <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-12"  data-aos="flip-up">
             <div class="card text-center shadow border-light">
               <lord-icon src="https://cdn.lordicon.com/imamsnbq.json" class="px-auto mx-auto" trigger="loop" colors="primary:#121331,secondary:#98c1d9" style="width:100px;height:100px">
                </lord-icon>
@@ -375,14 +372,12 @@
       </section>
 
      <!-------------->
-     <!-----timel-->
-     
-     <!--------------->
+    
      <!--book now-->
     
 <!--review-->
 <section class="testimonial" id="6">
-  <h1 class="text-center pt-5 mt-5">Testimonial</h1>
+  <h1 class="open text-center pt-5 mt-5">Testimonial</h1>
 <div class="review">
   
   <div class="swiper mySwiper">
@@ -540,13 +535,102 @@
 </div>
 </section>
 <!------>
-<section class="booking " id="5">
-  <div class="row g-0">
+<!-----timeline-->
+<h1 class="container text-center my-3 open py-5">Easy Travel</h1>
+<div class="container">
+ <div class="main-timeline">
+ 
+                         <!-- start experience section-->
+                         <div class="timeline">
+                             <div class="icon"></div>
+                             <div class="date-content">
+                                 <div class="date-outer">
+                                     <span class="date">
+                                             <span class="month">STEP</span>
+                                     <span class="year">1</span>
+                                     </span>
+                                 </div>
+                             </div>
+                             <div class="timeline-content">
+                                 <h5 class="title" data-aos="fade-up">SIGN-IN</h5>
+                                 <p class="description" data-aos="fade-up">
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                 </p>
+                             </div>
+                         </div>
+                         <!-- end experience section-->
+ 
+                         <!-- start experience section-->
+                         <div class="timeline">
+                             <div class="icon"></div>
+                             <div class="date-content">
+                                 <div class="date-outer">
+                                     <span class="date">
+                                             <span class="month">STEP</span>
+                                     <span class="year">2</span>
+                                     </span>
+                                 </div>
+                             </div>
+                             <div class="timeline-content">
+                                 <h5 class="title" data-aos="fade-up">SELECT YOUR DESTINATION</h5>
+                                 <p class="description"  data-aos="fade-up">
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                 </p>
+                             </div>
+                         </div>
+                         <!-- end experience section-->
+ 
+                         <!-- start experience section-->
+                         <div class="timeline">
+                             <div class="icon"></div>
+                             <div class="date-content">
+                                 <div class="date-outer">
+                                     <span class="date">
+                                             <span class="month">STEP</span>
+                                     <span class="year">3</span>
+                                     </span>
+                                 </div>
+                             </div>
+                             <div class="timeline-content">
+                                 <h5 class="title" data-aos="fade-up">BOOK WITH US</h5>
+                                 <p class="description" data-aos="fade-up">
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                 </p>
+                             </div>
+                         </div>
+                         <!-- end experience section-->
+ 
+                         <!-- start experience section-->
+                         <div class="timeline">
+                             <div class="icon"></div>
+                             <div class="date-content">
+                                 <div class="date-outer">
+                                     <span class="date">
+                                             <span class="month">STEP</span>
+                                     <span class="year">4</span>
+                                     </span>
+                                 </div>
+                             </div>
+                             <div class="timeline-content">
+                                 <h5 class="title"  data-aos="fade-up">GET READY FOR YOUR TRIP</h5>
+                                 <p class="description"  data-aos="fade-up">
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                 </p>
+                             </div>
+                         </div>
+                         <!-- end experience section-->
+ 
+                     </div>
+ </div>
+<!--------------->
+<!--booking-->
+<section class="booking mx-1" id="5">
+  <div class=" row g-0">
     <div class="col-lg-6 col-md-6 col-12 col-sm-12 shadow text-center">
      <h1 class="fw-bold py-4 text-center booking-heading">Book Your Trip Now!!</h1>
-     <lottie-player class=" mx-auto " src="https://assets5.lottiefiles.com/packages/lf20_ayk6t8xd.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop autoplay></lottie-player>
+     <lottie-player class=" mx-auto " src="https://assets5.lottiefiles.com/packages/lf20_ayk6t8xd.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px; max-width: 100%;"  loop autoplay></lottie-player>
   </div>
-  <div class="col-lg-6 col-md-6 col-12 col-sm-12 book2 px-5">
+  <div class="col-lg-6 col-md-6 col-12 col-sm-12 book2 px-5  ">
     
     <form class="">
  
@@ -854,6 +938,12 @@
   }
 })();
    </script>
-    
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+   <script>
+    AOS.init({
+      offset: 200,
+    }
+    );
+  </script>
   </body>
 </html>
